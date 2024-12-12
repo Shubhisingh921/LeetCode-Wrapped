@@ -41,20 +41,23 @@
 
         /* dark light mode*/
         :root {
-            --background-color: #f5f5f5; 
-            --text-color: #333; 
-            --primary-color: #1776EF; 
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --primary-color: #1776EF;
             --secondary-color: #FFC01E;
         }
+
         .dark-mode {
-            --background-color:#1D1D1D; 
-            --text-color: #fff; 
+            --background-color: #1D1D1D;
+            --text-color: #fff;
         }
+
         body {
             background-color: var(--background-color);
             color: var(--text-color);
             font-family: Arial, sans-serif;
         }
+
         /* .container {
             background-color: var(--background-color);
             color: var(--text-color);
@@ -72,15 +75,17 @@
             background-color: #f5f5f5;
         } */
 
-        
+
 
         img {
             width: 4%;
             height: 4%;
         }
+
         .dark-mode #first_container .cont p {
             color: #fff !important;
         }
+
         .dark-mode .button {
             font-size: 20px;
             padding: 10px 15px;
@@ -107,28 +112,35 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .dark-mode .radioButtons label span:before {
-            border: 1px solid #fff; 
+            border: 1px solid #fff;
         }
+
         .dark-mode .radioButtons label span:after {
             background: #fff;
         }
+
         .dark-mode .card {
             background-color: #333;
             color: #fff;
         }
-        
-        .dark-mode .card h1, .dark-mode .card h2, .dark-mode .card p {
+
+        .dark-mode .card h1,
+        .dark-mode .card h2,
+        .dark-mode .card p {
             color: #fff;
         }
-        
-        .dark-mode .card .box h1, .dark-mode .card .box1 h1 {
+
+        .dark-mode .card .box h1,
+        .dark-mode .card .box1 h1 {
             color: #fff;
         }
-        
-        .dark-mode .card .box p, .dark-mode .card .box1 p {
+
+        .dark-mode .card .box p,
+        .dark-mode .card .box1 p {
             color: #ccc;
-        } 
+        }
 
         #mode-toggle {
             display: flex;
@@ -141,29 +153,29 @@
             padding: 0;
         }
 
-#mode-toggle:hover {
-    opacity: 0.5;
-}
+        #mode-toggle:hover {
+            opacity: 0.5;
+        }
 
-#mode-toggle span {
-    font-size: 3em;
-    padding-right:0.5em;
+        #mode-toggle span {
+            font-size: 3em;
+            padding-right: 0.5em;
 
-}
+        }
 
-.dark-mode #sun-icon {
-    display: none;
-}
+        .dark-mode #sun-icon {
+            display: none;
+        }
 
-.dark-mode #moon-icon {
-    display: inline;
-}
+        .dark-mode #moon-icon {
+            display: inline;
+        }
 
-#moon-icon{
-    display: none;
-}
-        
-        
+        #moon-icon {
+            display: none;
+        }
+
+
 
 
         .container {
@@ -345,7 +357,7 @@
             box-sizing: border-box;
             /* Include padding and border in the width */
         }
-        
+
         ._mainBox {
             flex: 1;
         }
@@ -372,7 +384,7 @@
             gap: 10%;
         }
 
-        .boxGraph{
+        .boxGraph {
             margin-top: 0%;
             display: flex;
             justify-content: center;
@@ -449,7 +461,7 @@
         <img src="images/image 1.png">
         <!-- <a href="https://www.buymeacoffee.com/maityamitca" target="_blank"
             style="margin-right: 5%; text-decoration: none; color: #B1BAB8;">Buy me Coffee</a> -->
-    <!-- dark light mode button-->
+        <!-- dark light mode button-->
         <button id="mode-toggle" aria-label="Toggle dark mode">
             <span id="sun-icon">🌞</span>
             <span id="moon-icon">🌙</span>
@@ -459,7 +471,9 @@
 
     <div id="first_container" class="container">
         <h1><span style="color: #1776EF;">LeetCode</span> <span style="color: #2BB15B;">Wrapped</span></h1>
-        <div class="cont"><p style="font-size: 24px; color: rgb(0, 0, 0); margin-bottom: 20px;">Get your LeetCode Stats</p></div>
+        <div class="cont">
+            <p style="font-size: 24px; color: rgb(0, 0, 0); margin-bottom: 20px;">Get your LeetCode Stats</p>
+        </div>
         <button id="wrapButton" class="button" onclick="showInput()"><b>Let's Start</b></button>
         <div id="inputSection" style="display: none;">
             <input type="text" id="username" placeholder="Enter your username">
@@ -623,13 +637,13 @@
 
 
     <script>
-    
-    //Dark light mode
-    const modeToggle = document.getElementById('mode-toggle');
-    modeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-    });
-    
+
+        //Dark light mode
+        const modeToggle = document.getElementById('mode-toggle');
+        modeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
 
         // PIEchart Publish
         const PiexValues = ["0", "1", "2", "3", "4"];
@@ -736,7 +750,7 @@
             }
         }
 
-        wrap_up_button.addEventListener('click', async () => {
+        let wrapFunction = async () => {
             const value = userName.value;
             console.log(value);
             try {
@@ -772,7 +786,7 @@
                     var total_active_days = 0;
                     var total_questions_solved = 0;
                     var average_questions_contest = 0;
-                    var noOfQuestionsSolved = [0,0,0,0,0]
+                    var noOfQuestionsSolved = [0, 0, 0, 0, 0]
                     var allContestGlobalRank = []
                     var allContestGlobalRankXAXIS = []
 
@@ -805,17 +819,17 @@
                         total_active_days += data[(data.years)[key]].total_active_days;
                         total_questions_solved += data[(data.years)[key]].total_questions_solved;
                         average_questions_contest = (problems_solved_contest / contest_attended).toFixed(2);
-                        noOfQuestionsSolved[0]+=data[(data.years)[key]].noOfQuestionsSolved[0];
-                        noOfQuestionsSolved[1]+=data[(data.years)[key]].noOfQuestionsSolved[1];
-                        noOfQuestionsSolved[2]+=data[(data.years)[key]].noOfQuestionsSolved[2];
-                        noOfQuestionsSolved[3]+=data[(data.years)[key]].noOfQuestionsSolved[3];
-                        noOfQuestionsSolved[4]+=data[(data.years)[key]].noOfQuestionsSolved[4];
+                        noOfQuestionsSolved[0] += data[(data.years)[key]].noOfQuestionsSolved[0];
+                        noOfQuestionsSolved[1] += data[(data.years)[key]].noOfQuestionsSolved[1];
+                        noOfQuestionsSolved[2] += data[(data.years)[key]].noOfQuestionsSolved[2];
+                        noOfQuestionsSolved[3] += data[(data.years)[key]].noOfQuestionsSolved[3];
+                        noOfQuestionsSolved[4] += data[(data.years)[key]].noOfQuestionsSolved[4];
                         allContestGlobalRank.push(...data[(data.years)[key]].percentileCalculateBYrank);
                     }
 
 
                     let tempXval = []
-                    for(let i=0; i<allContestGlobalRank.length;i++) { tempXval.push(i); }
+                    for (let i = 0; i < allContestGlobalRank.length; i++) { tempXval.push(i); }
                     allContestGlobalRankXAXIS = tempXval
 
 
@@ -830,7 +844,7 @@
                     var mostActiveMonthContest = most_active_month_contest;
                     var totalActiveDays = total_active_days;
                     var totalQuestionsSolved = total_questions_solved;
-                    
+
 
                     var radioButtons = document.querySelectorAll('.radioButtons input[type="radio"]');
 
@@ -898,11 +912,11 @@
                                 myPieChart.data.datasets[0].data = PieyValues;
                                 myPieChart.update();
 
-                                
+
 
                                 yValues = data[(data.years)[buttonId]].percentileCalculateBYrank;
                                 let tempXval = []
-                                for(let i=0; i<yValues.length;i++) { tempXval.push(i); }
+                                for (let i = 0; i < yValues.length; i++) { tempXval.push(i); }
                                 myLineChart.data.datasets[0].data = yValues;
                                 myLineChart.data.labels = tempXval;
                                 myLineChart.update();
@@ -951,8 +965,8 @@
                     document.getElementById('q1max_streak').textContent = maxStreak
                     document.getElementById('q1active_month').textContent = mostActiveMonth
                     document.getElementById('q1active_day').textContent = mostActiveDay
-                    
-                    
+
+
 
 
                     // set Graph and Pie Chart
@@ -984,8 +998,8 @@
                         options: {
                             legend: { display: false },
                             scales: {
-                                xAxes: [{ ticks: { display: false }, gridLines: { display: false }}],
-                                yAxes: [{ ticks: { min: lowestRank, max: highestRank, reverse: true }}],
+                                xAxes: [{ ticks: { display: false }, gridLines: { display: false } }],
+                                yAxes: [{ ticks: { min: lowestRank, max: highestRank, reverse: true } }],
                             }
                         }
                     });
@@ -996,7 +1010,15 @@
                 alert("UserName Doesn't exist!!")
                 console.error("Error:", error.message);
             }
-        });
+        };
+
+        wrap_up_button.addEventListener("click", wrapFunction);
+
+        window.addEventListener("keydown", e => {
+            if (e.key == "Enter" && visibleDiv.style.display != "none" && wrapButton.style.display == "none") {
+                wrapFunction();
+            }
+        })
 
         function createRadioButton(id, label) {
             var div = document.createElement('label');
